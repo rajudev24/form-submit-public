@@ -38,9 +38,6 @@ export default function FormSubmit() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Name:", name);
-    console.log("Sectors:", selectedOption);
-    console.log("Agreed to terms:", termsAgreed);
     const data = {
       name: name,
       sector: selectedOption,

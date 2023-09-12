@@ -26,7 +26,7 @@ export default function FormUpdate() {
   };
 
   useEffect(() => {
-    axios(`http://localhost:5000`, {
+    axios(`https://from-submit-server.vercel.app`, {
       method: "GET",
       //   headers: {
       //     authorization: `bearer ${localStorage.getItem("userToken")}`,
@@ -54,7 +54,10 @@ export default function FormUpdate() {
     };
 
     axios
-      .patch(`http://localhost:5000/update/${formData?._id}`, updatedData)
+      .patch(
+        `https://from-submit-server.vercel.app/update/${formData?._id}`,
+        updatedData
+      )
       .then((res) => {
         console.log("Data updated successfully", res.data);
         alert("Update the data successfully");

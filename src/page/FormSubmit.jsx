@@ -46,7 +46,7 @@ export default function FormSubmit() {
       sector: selectedOption,
       termsAgreed: termsAgreed,
     };
-    const url = "http://localhost:5000/submit";
+    const url = "https://from-submit-server.vercel.app/submit";
     try {
       const response = await axios.post(url, data);
       console.log("API Response:", response.data);

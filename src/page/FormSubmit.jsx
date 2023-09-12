@@ -40,7 +40,7 @@ export default function FormSubmit() {
     event.preventDefault();
     const data = {
       name: name,
-      sector: selectedOption,
+      sector: selectedOption.trim(),
       termsAgreed: termsAgreed,
     };
     const url = "https://from-submit-server.vercel.app/submit";
